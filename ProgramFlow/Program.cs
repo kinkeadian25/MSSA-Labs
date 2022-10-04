@@ -13,6 +13,7 @@ namespace ProgramFlow
             SetInstructorName("Ian Kinkead");
             SetCourseTitle("PCAD8");
             AddClass("PCAD8", false, false, false);
+            Reminders("Sunday");
         }
         static void SetInstructorName(string instructorName) 
         { 
