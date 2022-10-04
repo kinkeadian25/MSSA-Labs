@@ -1,0 +1,8 @@
+C:\Users\kinke\OneDrive\Desktop\MSSA\Mod02\Labfiles\Starter Files\CS\NumericVariables_CS\NumericVariables_CS\bin\Debug\NumericVariables_CS.exe.config
+C:\Users\kinke\OneDrive\Desktop\MSSA\Mod02\Labfiles\Starter Files\CS\NumericVariables_CS\NumericVariables_CS\bin\Debug\NumericVariables_CS.exe
+C:\Users\kinke\OneDrive\Desktop\MSSA\Mod02\Labfiles\Starter Files\CS\NumericVariables_CS\NumericVariables_CS\bin\Debug\NumericVariables_CS.pdb
+C:\Users\kinke\OneDrive\Desktop\MSSA\Mod02\Labfiles\Starter Files\CS\NumericVariables_CS\NumericVariables_CS\obj\Debug\NumericVariables_CS.csproj.AssemblyReference.cache
+C:\Users\kinke\OneDrive\Desktop\MSSA\Mod02\Labfiles\Starter Files\CS\NumericVariables_CS\NumericVariables_CS\obj\Debug\NumericVariables_CS.csproj.SuggestedBindingRedirects.cache
+C:\Users\kinke\OneDrive\Desktop\MSSA\Mod02\Labfiles\Starter Files\CS\NumericVariables_CS\NumericVariables_CS\obj\Debug\NumericVariables_CS.csproj.CoreCompileInputs.cache
+C:\Users\kinke\OneDrive\Desktop\MSSA\Mod02\Labfiles\Starter Files\CS\NumericVariables_CS\NumericVariables_CS\obj\Debug\NumericVariables_CS.exe
+C:\Users\kinke\OneDrive\Desktop\MSSA\Mod02\Labfiles\Starter Files\CS\NumericVariables_CS\NumericVariables_CS\obj\Debug\NumericVariables_CS.pdb
