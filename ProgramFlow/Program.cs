@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -13,31 +13,30 @@ namespace ProgramFlow
         {
             SetInstructorName("Ian Kinkead");
             SetCourseTitle("PCAD8");
-            AddClass("PCAD8", false, false, false);
-            Reminders("Sunday");
+            CheckClass("PCAD8", true, true, false);
+            DailyReminders("Sunday");
             CalculateAverage();
             CalculateAverageWhile();
         }
-        static void SetInstructorName(string instructorName) 
-        { 
-        
+
+        static void SetInstructorName(string name)
+        {
+
         }
         static void SetCourseTitle(string courseTitle)
         {
-            bool outcome = ValidateCourseTitle(courseTitle);
-            if (outcome)
+            if (ValidateCourseTitle(courseTitle))
             {
-                string title = courseTitle;
-                Console.Out.WriteLine("Course title is " + title);
+                Console.WriteLine("Course Title exceeds 20 characters.");
             }
             else
-            {
-                Console.WriteLine("Error: Class name cannot surpass 20.");
+            { 
+                Console.WriteLine("Course Title is {0}.", courseTitle);
             }
         }
-        static bool ValidateCourseTitle(string correctTitle)
+        static bool ValidateCourseTitle(string courseTitle)
         {
-            if (correctTitle.Length <= 20)
+            if (courseTitle.Length >= 20)
             {
                 return true;
             }
@@ -46,45 +45,44 @@ namespace ProgramFlow
                 return false;
             }
         }
-        static void AddClass(string courseTitle, bool isInProgram, bool isRequired, bool isElective)
+        static void CheckClass(string courseTitle, bool inProgram, bool isRequired, bool isElective)
         {
-            if (isInProgram)
+            if (inProgram)
             {
                 if (isRequired)
                 {
-                    Console.Out.WriteLine(courseTitle + " is in the program and is a required course.");
+                    Console.WriteLine("Class is in program and required.");
                 }
                 else if (isElective)
                 {
-                    Console.Out.WriteLine(courseTitle + " is in the program and is an elective.");
+                    Console.WriteLine("Class is in program and an elective.");
                 }
                 else
                 {
-                    Console.Out.WriteLine(courseTitle + " is in the program and is extra credit.");
+                    Console.WriteLine("Class is in program but not an elective or required");
                 }
             }
             else
             {
-                Console.Out.WriteLine(courseTitle + " is not in the Program.");
+                Console.WriteLine("Class is not in program.");
             }
         }
-
-        static void Reminders(string dayOfWeek)
+        static void DailyReminders(string dayOfWeek)
         {
             switch (dayOfWeek)
             {
                 case "Wednesday":
-                    Console.WriteLine("Discussion post due today.");
+                    Console.WriteLine("Discussion post due!");
                     break;
                 case "Friday":
-                    Console.WriteLine("Quiz today");
+                    Console.WriteLine("Quiz Day.");
                     break;
                 case "Sunday":
-                    Console.WriteLine("Assignment Due");
+                    Console.WriteLine("Assignments Due");
                     break;
                 default:
                     Console.WriteLine("Lecture day");
-                    break;                  
+                    break;
             }
         }
 
@@ -92,34 +90,34 @@ namespace ProgramFlow
         {
             double[] grades = new double[] { 89, 98, 99, 90, 95 };
             double average = 0;
-            double sumOfGrades = 0;
+            double total = 0;
             int gradeCounter;
 
             for (gradeCounter = 0; gradeCounter < grades.Length; gradeCounter++)
             {
-                sumOfGrades = sumOfGrades + grades[gradeCounter];
+                total = total + grades[gradeCounter];
             }
-            average = sumOfGrades / gradeCounter;
-            Console.WriteLine("The student's average grade is {0},", average);
+            average = total / grades.Length;
+            Console.WriteLine("Average grade is {0}.", average);
         }
         static void CalculateAverageWhile()
         {
-            double grade = 0;
-            double average = 0;
+            double grade;
             double sumOfGrades = 0;
-            int gradeCounter = 0;
+            double average = 0;
+            double gradeCounter = 0;
+
+            Console.WriteLine("Please enter grades, once complete enter 0 for average.");
             grade = Double.Parse(Console.ReadLine());
 
-            while(grade != 0)
+            while (grade != 0)
             {
                 sumOfGrades = sumOfGrades + grade;
                 gradeCounter++;
-                Console.WriteLine("Type an additional grade or type 0 to end.");
                 grade = Double.Parse(Console.ReadLine());
             }
             average = sumOfGrades / gradeCounter;
-            Console.Out.WriteLine("Grade average is: " + average);
-
+            Console.WriteLine("Your average is {0}.", average);
         }
     }
 }
