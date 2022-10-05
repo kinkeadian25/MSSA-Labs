@@ -21,7 +21,7 @@ namespace ProgramFlow
 
         static void SetInstructorName(string name)
         {
-
+            Console.WriteLine(name);
         }
         static void SetCourseTitle(string courseTitle)
         {
